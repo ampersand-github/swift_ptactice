@@ -1,1 +1,5 @@
-line_length: 300
+line_length: 180
+identifier_name:
+  excluded:
+    - id # 文字列 id の場合はルールを無視する。こいつのデフォルトワーニングが３なのでidだとワーニングが出てしまうことへの対策
+
