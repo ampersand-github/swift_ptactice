@@ -19,6 +19,15 @@
 		D7A456C524DD3F9B00462F94 /* SwiftUIProgramingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A456C424DD3F9B00462F94 /* SwiftUIProgramingUITests.swift */; };
 		D7A456D424DD40E100462F94 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D7A456D324DD40E100462F94 /* .swiftlint.yml */; };
 		D7A456D724DD52BF00462F94 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7A456D624DD52BF00462F94 /* Podfile */; };
+		D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06424DFBE5A00406032 /* DetailView.swift */; };
+		D7C8E06724DFBE5A00406032 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06524DFBE5A00406032 /* ItemView.swift */; };
+		D7C8E06924DFBE6D00406032 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06824DFBE6D00406032 /* ColorView.swift */; };
+		D7C8E06F24DFBFD600406032 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06E24DFBFD500406032 /* CounterView.swift */; };
+		D7C8E07124DFBFF200406032 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E07024DFBFF200406032 /* ButtonView.swift */; };
+		D7C8E07324DFC03600406032 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E07224DFC03600406032 /* FormView.swift */; };
+		D7C8E08624DFC5FC00406032 /* LoremViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E08524DFC5FC00406032 /* LoremViewModel.swift */; };
+		D7C8E08924DFC76800406032 /* LoremView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E08824DFC76800406032 /* LoremView.swift */; };
+		D7C8E0BC24E018DA00406032 /* LoremService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E0BB24E018DA00406032 /* LoremService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +73,15 @@
 		D7A456C624DD3F9B00462F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A456D324DD40E100462F94 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D7A456D624DD52BF00462F94 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D7C8E06424DFBE5A00406032 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D7C8E06524DFBE5A00406032 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		D7C8E06824DFBE6D00406032 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		D7C8E06E24DFBFD500406032 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		D7C8E07024DFBFF200406032 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		D7C8E07224DFC03600406032 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		D7C8E08524DFC5FC00406032 /* LoremViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremViewModel.swift; sourceTree = "<group>"; };
+		D7C8E08824DFC76800406032 /* LoremView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremView.swift; sourceTree = "<group>"; };
+		D7C8E0BB24E018DA00406032 /* LoremService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +161,9 @@
 		D7A456A124DD3F9900462F94 /* SwiftUIPrograming */ = {
 			isa = PBXGroup;
 			children = (
+				D7C8E07424DFC15D00406032 /* Lorem */,
+				D7C8E06D24DFBFD500406032 /* Simple */,
+				D7C8E06324DFBE5A00406032 /* Color */,
 				D7A456A224DD3F9900462F94 /* AppDelegate.swift */,
 				D7A456A424DD3F9900462F94 /* SceneDelegate.swift */,
 				D7A456A624DD3F9900462F94 /* ContentView.swift */,
@@ -178,6 +199,76 @@
 				D7A456C624DD3F9B00462F94 /* Info.plist */,
 			);
 			path = SwiftUIProgramingUITests;
+			sourceTree = "<group>";
+		};
+		D7C8E06324DFBE5A00406032 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E06424DFBE5A00406032 /* DetailView.swift */,
+				D7C8E06524DFBE5A00406032 /* ItemView.swift */,
+				D7C8E06824DFBE6D00406032 /* ColorView.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		D7C8E06D24DFBFD500406032 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E06E24DFBFD500406032 /* CounterView.swift */,
+				D7C8E07024DFBFF200406032 /* ButtonView.swift */,
+				D7C8E07224DFC03600406032 /* FormView.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		D7C8E07424DFC15D00406032 /* Lorem */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E0B924E018DA00406032 /* Model */,
+				D7C8E08724DFC72600406032 /* View */,
+				D7C8E08024DFC59B00406032 /* ViewModel */,
+			);
+			path = Lorem;
+			sourceTree = "<group>";
+		};
+		D7C8E08024DFC59B00406032 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E08524DFC5FC00406032 /* LoremViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7C8E08724DFC72600406032 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E08824DFC76800406032 /* LoremView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7C8E0B924E018DA00406032 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E0BD24E0191700406032 /* Type */,
+				D7C8E0BA24E018DA00406032 /* Service */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7C8E0BA24E018DA00406032 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8E0BB24E018DA00406032 /* LoremService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D7C8E0BD24E0191700406032 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +514,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C8E06924DFBE6D00406032 /* ColorView.swift in Sources */,
 				D7A456A324DD3F9900462F94 /* AppDelegate.swift in Sources */,
+				D7C8E07124DFBFF200406032 /* ButtonView.swift in Sources */,
+				D7C8E08924DFC76800406032 /* LoremView.swift in Sources */,
+				D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */,
+				D7C8E06F24DFBFD600406032 /* CounterView.swift in Sources */,
 				D7A456A524DD3F9900462F94 /* SceneDelegate.swift in Sources */,
+				D7C8E07324DFC03600406032 /* FormView.swift in Sources */,
+				D7C8E06724DFBE5A00406032 /* ItemView.swift in Sources */,
 				D7A456A724DD3F9900462F94 /* ContentView.swift in Sources */,
+				D7C8E0BC24E018DA00406032 /* LoremService.swift in Sources */,
+				D7C8E08624DFC5FC00406032 /* LoremViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
