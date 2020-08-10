@@ -13,11 +13,11 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 VStack {
-                    NavigationLink(destination: CountView()) { Text("CountView").font(.title).padding() }
-                    NavigationLink(destination: ButtonView()) { Text("ButtonView").font(.title).padding() }
-                    NavigationLink(destination: FormView()) { Text("FormView").font(.title).padding() }
-                    NavigationLink(destination: ColorView()) { Text("ColorView").font(.title).padding() }
-                    NavigationLink(destination: LoremView()) { Text("LoremView").font(.title).padding() }
+                    NavigationLink(destination: CountView()) { Text("CountView").modifier(CustomModifier()) }
+                    NavigationLink(destination: ButtonView()) { Text("ButtonView").modifier(CustomModifier()) }
+                    NavigationLink(destination: FormView()) { Text("FormView").modifier(CustomModifier()) }
+                    NavigationLink(destination: ColorView()) { Text("ColorView").modifier(CustomModifier()) }
+                    NavigationLink(destination: LoremView()) { Text("LoremView").modifier(CustomModifier()) }
                 }
             }
         }
