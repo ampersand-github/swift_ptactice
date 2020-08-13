@@ -13,16 +13,15 @@ protocol ViewModelObject: ObservableObject {
     var output: Output { get }
 }
 
-extension ViewModelObject where Binding.ObjectWillChangePublisher == ObservableObjectPublisher, Output.ObjectWillChangePublisher == ObservableObjectPublisher {
+extension ViewModelObject where
+    Binding.ObjectWillChangePublisher == ObservableObjectPublisher, Output.ObjectWillChangePublisher == ObservableObjectPublisher {
     var objectWillChange: AnyPublisher<Void, Never> {
         Publishers.Merge(binding.objectWillChange, output.objectWillChange).eraseToAnyPublisher()
     }
 }
 
 protocol InputObject: AnyObject {}
-
 protocol BindingObject: ObservableObject {}
-
 protocol OutputObject: ObservableObject {}
 
 @propertyWrapper struct BindableObject<T: BindingObject> {

@@ -40,6 +40,9 @@
 		D7A456C524DD3F9B00462F94 /* SwiftUIProgramingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A456C424DD3F9B00462F94 /* SwiftUIProgramingUITests.swift */; };
 		D7A456D424DD40E100462F94 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D7A456D324DD40E100462F94 /* .swiftlint.yml */; };
 		D7A456D724DD52BF00462F94 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7A456D624DD52BF00462F94 /* Podfile */; };
+		D7AF51E524E5D8FD00E4F9B4 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF51E424E5D8FD00E4F9B4 /* TodoView.swift */; };
+		D7AF51EA24E5E5EA00E4F9B4 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF51E924E5E5EA00E4F9B4 /* TodoViewModel.swift */; };
+		D7AF51EF24E5E94B00E4F9B4 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF51EE24E5E94B00E4F9B4 /* TodoModel.swift */; };
 		D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06424DFBE5A00406032 /* DetailView.swift */; };
 		D7C8E06724DFBE5A00406032 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06524DFBE5A00406032 /* ItemView.swift */; };
 		D7C8E06924DFBE6D00406032 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E06824DFBE6D00406032 /* ColorView.swift */; };
@@ -115,6 +118,9 @@
 		D7A456C624DD3F9B00462F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A456D324DD40E100462F94 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D7A456D624DD52BF00462F94 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D7AF51E424E5D8FD00E4F9B4 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		D7AF51E924E5E5EA00E4F9B4 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		D7AF51EE24E5E94B00E4F9B4 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		D7C8E06424DFBE5A00406032 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D7C8E06524DFBE5A00406032 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		D7C8E06824DFBE6D00406032 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 		D7A456A124DD3F9900462F94 /* SwiftUIPrograming */ = {
 			isa = PBXGroup;
 			children = (
+				D7AF51E324E5D8EE00E4F9B4 /* TODO */,
 				D782310524E487A7005EDA60 /* Login */,
 				D79F283224E1387B00288CBC /* Weather */,
 				D7A24E7F24E0CBC400AA1D4B /* Custom */,
@@ -350,6 +357,40 @@
 				D7A456C624DD3F9B00462F94 /* Info.plist */,
 			);
 			path = SwiftUIProgramingUITests;
+			sourceTree = "<group>";
+		};
+		D7AF51E324E5D8EE00E4F9B4 /* TODO */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF51EB24E5E90C00E4F9B4 /* Model */,
+				D7AF51E724E5E57000E4F9B4 /* ViewModel */,
+				D7AF51E624E5E57000E4F9B4 /* View */,
+			);
+			path = TODO;
+			sourceTree = "<group>";
+		};
+		D7AF51E624E5E57000E4F9B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF51E424E5D8FD00E4F9B4 /* TodoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7AF51E724E5E57000E4F9B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF51E924E5E5EA00E4F9B4 /* TodoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7AF51EB24E5E90C00E4F9B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF51EE24E5E94B00E4F9B4 /* TodoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D7C8E06324DFBE5A00406032 /* Color */ = {
@@ -674,11 +715,13 @@
 				D79F285724E1387B00288CBC /* CurrentWeatherRowViewModel.swift in Sources */,
 				D79F285A24E1387B00288CBC /* WeatherFetcher.swift in Sources */,
 				D79F284D24E1387B00288CBC /* WeeklyWeatherViewModel.swift in Sources */,
+				D7AF51EF24E5E94B00E4F9B4 /* TodoModel.swift in Sources */,
 				D79F285324E1387B00288CBC /* Parsing.swift in Sources */,
 				D7A456A324DD3F9900462F94 /* AppDelegate.swift in Sources */,
 				D7C8E07124DFBFF200406032 /* ButtonView.swift in Sources */,
 				D7A24E8124E0CC0E00AA1D4B /* CustomBuilder.swift in Sources */,
 				D79F285124E1387B00288CBC /* MapView.swift in Sources */,
+				D7AF51E524E5D8FD00E4F9B4 /* TodoView.swift in Sources */,
 				D7C8E08924DFC76800406032 /* LoremView.swift in Sources */,
 				D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */,
 				D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */,
@@ -697,6 +740,7 @@
 				D7C8E08624DFC5FC00406032 /* LoremViewModel.swift in Sources */,
 				D79F284E24E1387B00288CBC /* DailyWeatherRow.swift in Sources */,
 				D79F285424E1387B00288CBC /* CurrentWeatherViewModel.swift in Sources */,
+				D7AF51EA24E5E5EA00E4F9B4 /* TodoViewModel.swift in Sources */,
 				D79F285824E1387B00288CBC /* WeatherError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

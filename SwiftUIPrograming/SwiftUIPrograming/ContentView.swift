@@ -18,6 +18,7 @@ struct ContentView: View {
                     NavigationLink(destination: FormView()) { Text("FormView").modifier(CustomModifier()) }
                     NavigationLink(destination: ColorView()) { Text("ColorView").modifier(CustomModifier()) }
                     NavigationLink(destination: LoremView()) { Text("LoremView").modifier(CustomModifier()) }
+                    NavigationLink(destination: TodoView()) { Text("TodoView").modifier(CustomModifier()) }
                 }
             }
         }
