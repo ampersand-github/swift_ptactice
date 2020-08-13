@@ -117,11 +117,11 @@ extension WeatherFetcher: WeatherFetchable {
             // 3
             .mapError { error in
                 .network(description: error.localizedDescription)
-            }
+        }
             // 4
             .flatMap(maxPublishers: .max(1)) { pair in
                 decode(pair.data)
-            }
+        }
             // 5
             .eraseToAnyPublisher()
     }

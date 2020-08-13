@@ -92,6 +92,7 @@ private extension WeeklyWeatherView {
 
 struct WeeklyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyWeatherView(viewModel: WeeklyWeatherViewModel)
+        // WeeklyWeatherView(viewModel: WeeklyWeatherViewModel)
+        Text("aa")
     }
 }

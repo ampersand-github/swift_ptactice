@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
-        let fetcher = WeatherFetcher()
-        let viewModel = WeeklyWeatherViewModel(weatherFetcher: fetcher)
-        let weeklyView = WeeklyWeatherView(viewModel: viewModel)
+        // let fetcher = WeatherFetcher()
+        // let viewModel = WeeklyWeatherViewModel(weatherFetcher: fetcher)
+        // let weeklyView = WeeklyWeatherView(viewModel: viewModel)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

@@ -37,6 +37,6 @@ func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, WeatherError> {
         .decode(type: T.self, decoder: decoder)
         .mapError { error in
             .parsing(description: error.localizedDescription)
-        }
-        .eraseToAnyPublisher()
+    }
+    .eraseToAnyPublisher()
 }

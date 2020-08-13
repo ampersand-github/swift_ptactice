@@ -52,7 +52,7 @@ class WeeklyWeatherViewModel: ObservableObject, Identifiable {
             .map { response in
                 // 2
                 response.list.map(DailyWeatherRowViewModel.init)
-            }
+        }
 
             // 3
             .map(Array.removeDuplicates)
@@ -78,7 +78,7 @@ class WeeklyWeatherViewModel: ObservableObject, Identifiable {
                     // 7
                     self.dataSource = forecast
                 }
-            )
+        )
 
             // 8
             .store(in: &disposables)

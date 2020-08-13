@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A10A8C4D99CF7CF51262BF62 /* Pods_SwiftUIProgramingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B0B6DF3E4C9E1779082325 /* Pods_SwiftUIProgramingTests.framework */; };
+		D782310724E487C9005EDA60 /* ViewModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782310624E487C9005EDA60 /* ViewModelObject.swift */; };
+		D782310924E48875005EDA60 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782310824E48875005EDA60 /* SignUpViewModel.swift */; };
+		D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782310A24E488A9005EDA60 /* SignUpView.swift */; };
 		D78DCC35E1EFFEA8F17ECFF3 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31141A9C66B486583F622B2 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework */; };
 		D79F284B24E1387B00288CBC /* WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283424E1387B00288CBC /* WeeklyWeatherView.swift */; };
 		D79F284C24E1387B00288CBC /* WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283524E1387B00288CBC /* WeeklyWeatherBuilder.swift */; };
@@ -75,6 +78,9 @@
 		A31141A9C66B486583F622B2 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46F18E92607E2D1F5A9FCFF /* Pods-SwiftUIProgramingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProgramingTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIProgramingTests/Pods-SwiftUIProgramingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6FF9A51F832944AAF250B3D /* Pods-SwiftUIPrograming-SwiftUIProgramingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPrograming-SwiftUIProgramingUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPrograming-SwiftUIProgramingUITests/Pods-SwiftUIPrograming-SwiftUIProgramingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D782310624E487C9005EDA60 /* ViewModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelObject.swift; sourceTree = "<group>"; };
+		D782310824E48875005EDA60 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D782310A24E488A9005EDA60 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D79F283424E1387B00288CBC /* WeeklyWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		D79F283524E1387B00288CBC /* WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
 		D79F283624E1387B00288CBC /* WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +174,16 @@
 				A46F18E92607E2D1F5A9FCFF /* Pods-SwiftUIProgramingTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D782310524E487A7005EDA60 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D782310624E487C9005EDA60 /* ViewModelObject.swift */,
+				D782310824E48875005EDA60 /* SignUpViewModel.swift */,
+				D782310A24E488A9005EDA60 /* SignUpView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D79F283224E1387B00288CBC /* Weather */ = {
@@ -293,6 +309,7 @@
 		D7A456A124DD3F9900462F94 /* SwiftUIPrograming */ = {
 			isa = PBXGroup;
 			children = (
+				D782310524E487A7005EDA60 /* Login */,
 				D79F283224E1387B00288CBC /* Weather */,
 				D7A24E7F24E0CBC400AA1D4B /* Custom */,
 				D7C8E07424DFC15D00406032 /* Lorem */,
@@ -599,7 +616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --format\n";
 		};
 		D7A456D524DD443D00462F94 /* Formatter */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -652,6 +669,7 @@
 				D79F284F24E1387B00288CBC /* DailyWeatherRowViewModel.swift in Sources */,
 				D79F285224E1387B00288CBC /* Formatters.swift in Sources */,
 				D7A24E8324E0CE7100AA1D4B /* CustomModifier.swift in Sources */,
+				D782310724E487C9005EDA60 /* ViewModelObject.swift in Sources */,
 				D79F285524E1387B00288CBC /* CurrentWeatherRow.swift in Sources */,
 				D79F285724E1387B00288CBC /* CurrentWeatherRowViewModel.swift in Sources */,
 				D79F285A24E1387B00288CBC /* WeatherFetcher.swift in Sources */,
@@ -663,8 +681,10 @@
 				D79F285124E1387B00288CBC /* MapView.swift in Sources */,
 				D7C8E08924DFC76800406032 /* LoremView.swift in Sources */,
 				D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */,
+				D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */,
 				D7C8E06F24DFBFD600406032 /* CounterView.swift in Sources */,
 				D79F285024E1387B00288CBC /* Array+Filtering.swift in Sources */,
+				D782310924E48875005EDA60 /* SignUpViewModel.swift in Sources */,
 				D7A456A524DD3F9900462F94 /* SceneDelegate.swift in Sources */,
 				D7C8E07324DFC03600406032 /* FormView.swift in Sources */,
 				D79F285924E1387B00288CBC /* Responses.swift in Sources */,
