@@ -9,6 +9,9 @@
 import SwiftUI
 
 class TodoViewModel: ObservableObject {
-    @Published var title: String = ""
-    @Published var titleList: [TodoModel] = []
+    @Published var titleList: [TodoModel] = [
+        TodoModel(title: "aaa", dateDeadLine: nil),
+        TodoModel(title: "nnn", dateDeadLine: nil),
+        TodoModel(title: "ddd", dateDeadLine: nil)
+    ]
 }

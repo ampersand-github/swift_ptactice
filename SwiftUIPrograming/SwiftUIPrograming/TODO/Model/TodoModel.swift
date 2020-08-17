@@ -12,4 +12,6 @@ import SwiftUI
 struct TodoModel: Identifiable {
     var id = UUID()
     var title: String
+    var dateDeadLine: Date?
+    var TimeDeadLine: Date?
 }

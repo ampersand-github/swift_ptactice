@@ -9,18 +9,35 @@
 import SwiftUI
 
 struct TodoView: View {
-    @ObservedObject var TodoVM = TodoViewModel()
+    @ObservedObject var todoVM: TodoViewModel = TodoViewModel()
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                TextField("StringProtocol", text: $TodoVM.title)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Text("bvbbb")
-                Text("bvbbb")
-                Text(TodoVM.title)
-                Spacer() // 一番下に書くと上揃えになる。
-            }.padding(24)
-                .navigationBarTitle(Text("TODO-LIST")) // 配置場所に注意、これがappbarに相当する。
+        ZStack {
+            VStack {
+                TabView {
+                    // - - - - - tag1 - - - - - -
+                    VStack(alignment: .leading) {
+                        InputView(todoVM: todoVM)
+                        Spacer().frame(height: 48)
+                        TodoRowView(todoVM: todoVM)
+                        Spacer()
+                    }.padding(.horizontal, 24)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "square.and.pencil")
+                                Text("メモ")
+                            }
+                    }.tag(1)
+                    // - - - - - tag2 - - - - - -
+                    Text("Setting")
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "person.crop.circle")
+                                Text("設定")
+                            }
+                    }.tag(2)
+                }
+            }
+            FloatingActionButton(todoVM: todoVM)
         }
     }
 }
