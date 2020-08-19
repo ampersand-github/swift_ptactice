@@ -27,9 +27,6 @@ struct InputView: View {
         TextField("メモを入力",
                   text: $string,
                   onCommit: {
-                    self.todoVM.titleList.append(
-                        TodoModel(id: UUID(), title: self.string)
-                    )
                     self.string = ""
 
         })

@@ -17,8 +17,8 @@ struct TodoRowView: View {
                 HStack(spacing: 24) {
                     Toggle("", isOn: self.$vibrateOnRing).frame(width: 48)
                     VStack {
-                        Text("期限：12/24").font(.caption)
                         Text(String("\(item.dateDeadLine)")).font(.caption)
+                        Text(String("\(item.timeDeadLine)")).font(.caption)
                         Text(item.title).font(.title)
                     }
                     Spacer()

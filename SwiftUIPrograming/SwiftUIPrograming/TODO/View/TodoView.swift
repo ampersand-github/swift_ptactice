@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TodoView: View {
     @ObservedObject var todoVM: TodoViewModel = TodoViewModel()
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
             VStack {
