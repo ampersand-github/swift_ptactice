@@ -8,6 +8,17 @@
 
 import SwiftUI
 
+struct MyToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.label
+            Spacer()
+                .frame(width: 22, height: 22)
+                .onTapGesture { configuration.isOn.toggle() }
+        }
+    }
+}
+
 struct InputSheetView: View {
     @ObservedObject var todoVM: TodoViewModel
     @Environment(\.presentationMode) var presentationMode
@@ -17,62 +28,84 @@ struct InputSheetView: View {
     @State private var date = Date()
     @State private var time = Date()
 
-    // [https://www.appcoda.com/swiftui-form-ui/ SwiftUI Tutorial: How to Build a Form UI for iOS Apps]
-    // でつくりなおしてみる。
-    // formはボタンが置けるけど、デザインがだめ
+    private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
 
     var body: some View {
         NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("メモのタイトルを入力してください。")) {
-                        TextField("メモを入力", text: $string)
-                    }
-                    Section(header: Text("日付の期限を選択してください。")) {
-                        Toggle(isOn: $dateFlag) {
-                            // Image(systemName: "tram.fill")
-                            Text("日付の入力")
-                        }
-                        Group {
-                            if self.dateFlag {
-                                DatePicker("日付を選択", selection: $date, displayedComponents: .date)
-                            } else {
-                                Text("選択できません").font(.caption).opacity(0.6)
-                            }
-                        }
-                    }
-                    Section(header: Text("時間の期限を選択してください。")) {
-                        Toggle(isOn: $timeFlag) {
-                            // Image(systemName: "tram.fill")
-                            Text("時間の入力").font(.caption).opacity(0.6)
-                        }
-                        Group {
-                            if self.timeFlag {
-                                DatePicker("時刻を選択", selection: $time, displayedComponents: .hourAndMinute)
-                            } else {
-                                Text("選択できません").font(.caption)
-                            }
-                        }
-                    }
-                    Button(action: {
-                        print("Button Tapped")
-                        // https://capibara1969.com/2508/ リファクタリングするときここ参照
-                        self.todoVM.titleList.append(
-                            TodoModel(
-                                title: self.string,
-                                dateDeadLine: self.dateFlag ?self.date : nil,
-                                timeDeadLine: self.timeFlag ?self.time : nil,
-                                isComplete: false
-                            )
-                        )
-                        self.presentationMode.wrappedValue.dismiss()
+            VStack(alignment: .leading) {
+                Spacer().frame(height: 24)
+                TextFeildView()
+                HStack {
+                    Text("日付の期限").font(.headline)
+                    Toggle("", isOn: $dateFlag)
+                    Spacer().frame(width: 8)
+                }
 
-                    }) {
-                        Text("Button")
+                VStack {
+                    Group {
+                        if self.dateFlag {
+                            DatePicker("", selection: $date, displayedComponents: .date)
+                        } else {
+                            Text("選択できません").font(.caption).opacity(0.6)
+                                .frame(width: UIScreen.main.bounds.size.width - 32, height: 48)
+                        }
+                    }
+                }.background(backgroundColor)
+
+                Spacer().frame(height: 24)
+                HStack {
+                    Text("時間の期限").font(.headline)
+                    Toggle("", isOn: $timeFlag)
+                    Spacer().frame(width: 8)
+                }
+                // - - - - - -  -- - - - - - - -  ----------------------------------
+                VStack {
+                    Text("日付の期限").font(.headline)
+                    Group {
+                        if self.dateFlag {
+                            DatePicker("", selection: $time, displayedComponents: .hourAndMinute)
+                        } else {
+                            Text("選択できません").font(.caption).opacity(0.6)
+                                .frame(width: UIScreen.main.bounds.size.width - 32, height: 48)
+                        }
                     }
                 }
-                .navigationBarTitle("フォームタイトル")
+
+                // - - - - - -  -- - - - - - - -  ----------------------------------
+                Spacer().frame(height: 48)
+                Button(action: {
+                    print("Button Tapped")
+                    // https://capibara1969.com/2508/ リファクタリングするときここ参照
+                    self.todoVM.titleList.append(
+                        TodoModel(
+                            title: self.string,
+                            dateDeadLine: self.dateFlag ?self.date : nil,
+                            timeDeadLine: self.timeFlag ?self.time : nil,
+                            isComplete: false
+                        )
+                    )
+                    self.presentationMode.wrappedValue.dismiss()
+
+                }) {
+                    Text("Button")
+                }
+                Spacer()
+                    .navigationBarTitle("メモを作成")
             }
+        }.padding(EdgeInsets(top: 24, leading: 16, bottom: 24, trailing: 16))
+    }
+}
+
+struct TextFeildView: View {
+    @State private var string: String = ""
+    private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
+    var body: some View {
+        VStack {
+            Text("メモのタイトル").font(.headline)
+            TextField("メモを入力", text: $string)
+                .padding(.all)
+                .background(backgroundColor)
+            Spacer().frame(height: 24)
         }
     }
 }
