@@ -16,7 +16,6 @@
 		D79E767C24E9DCE20099FEF1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767724E9DCE10099FEF1 /* InputView.swift */; };
 		D79E767D24E9DCE20099FEF1 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767824E9DCE10099FEF1 /* FloatingActionButton.swift */; };
 		D79E767E24E9DCE20099FEF1 /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767924E9DCE10099FEF1 /* TextAlert.swift */; };
-		D79E767F24E9DCE20099FEF1 /* InputSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767A24E9DCE20099FEF1 /* InputSheetView.swift */; };
 		D79F284B24E1387B00288CBC /* WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283424E1387B00288CBC /* WeeklyWeatherView.swift */; };
 		D79F284C24E1387B00288CBC /* WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283524E1387B00288CBC /* WeeklyWeatherBuilder.swift */; };
 		D79F284D24E1387B00288CBC /* WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283624E1387B00288CBC /* WeeklyWeatherViewModel.swift */; };
@@ -57,6 +56,10 @@
 		D7C8E08624DFC5FC00406032 /* LoremViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E08524DFC5FC00406032 /* LoremViewModel.swift */; };
 		D7C8E08924DFC76800406032 /* LoremView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E08824DFC76800406032 /* LoremView.swift */; };
 		D7C8E0BC24E018DA00406032 /* LoremService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8E0BB24E018DA00406032 /* LoremService.swift */; };
+		D7DC321C24EF0E0A00178A4F /* CreateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC321B24EF0E0A00178A4F /* CreateMemoView.swift */; };
+		D7DC321F24EF12BF00178A4F /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC321E24EF12BF00178A4F /* TextFieldComponent.swift */; };
+		D7DC322124EF145800178A4F /* DeadlineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC322024EF145800178A4F /* DeadlineComponent.swift */; };
+		D7DC322324EF22ED00178A4F /* SubmitButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC322224EF22ED00178A4F /* SubmitButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +96,6 @@
 		D79E767724E9DCE10099FEF1 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D79E767824E9DCE10099FEF1 /* FloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		D79E767924E9DCE10099FEF1 /* TextAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
-		D79E767A24E9DCE20099FEF1 /* InputSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputSheetView.swift; sourceTree = "<group>"; };
 		D79F283424E1387B00288CBC /* WeeklyWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		D79F283524E1387B00288CBC /* WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
 		D79F283624E1387B00288CBC /* WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +142,10 @@
 		D7C8E08524DFC5FC00406032 /* LoremViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremViewModel.swift; sourceTree = "<group>"; };
 		D7C8E08824DFC76800406032 /* LoremView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremView.swift; sourceTree = "<group>"; };
 		D7C8E0BB24E018DA00406032 /* LoremService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremService.swift; sourceTree = "<group>"; };
+		D7DC321B24EF0E0A00178A4F /* CreateMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemoView.swift; sourceTree = "<group>"; };
+		D7DC321E24EF12BF00178A4F /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		D7DC322024EF145800178A4F /* DeadlineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineComponent.swift; sourceTree = "<group>"; };
+		D7DC322224EF22ED00178A4F /* SubmitButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,8 +388,8 @@
 		D7AF51E624E5E57000E4F9B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7DC321D24EF0F0800178A4F /* CreateMemoView */,
 				D79E767824E9DCE10099FEF1 /* FloatingActionButton.swift */,
-				D79E767A24E9DCE20099FEF1 /* InputSheetView.swift */,
 				D79E767724E9DCE10099FEF1 /* InputView.swift */,
 				D79E767924E9DCE10099FEF1 /* TextAlert.swift */,
 				D79E767624E9DCE10099FEF1 /* TodoRowView.swift */,
@@ -476,6 +482,17 @@
 			children = (
 			);
 			path = Type;
+			sourceTree = "<group>";
+		};
+		D7DC321D24EF0F0800178A4F /* CreateMemoView */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC321B24EF0E0A00178A4F /* CreateMemoView.swift */,
+				D7DC321E24EF12BF00178A4F /* TextFieldComponent.swift */,
+				D7DC322024EF145800178A4F /* DeadlineComponent.swift */,
+				D7DC322224EF22ED00178A4F /* SubmitButtonComponent.swift */,
+			);
+			name = CreateMemoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -721,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DC321C24EF0E0A00178A4F /* CreateMemoView.swift in Sources */,
 				D79E767C24E9DCE20099FEF1 /* InputView.swift in Sources */,
 				D7C8E06924DFBE6D00406032 /* ColorView.swift in Sources */,
 				D79F284F24E1387B00288CBC /* DailyWeatherRowViewModel.swift in Sources */,
@@ -729,6 +747,7 @@
 				D782310724E487C9005EDA60 /* ViewModelObject.swift in Sources */,
 				D79F285524E1387B00288CBC /* CurrentWeatherRow.swift in Sources */,
 				D79F285724E1387B00288CBC /* CurrentWeatherRowViewModel.swift in Sources */,
+				D7DC322324EF22ED00178A4F /* SubmitButtonComponent.swift in Sources */,
 				D79F285A24E1387B00288CBC /* WeatherFetcher.swift in Sources */,
 				D79F284D24E1387B00288CBC /* WeeklyWeatherViewModel.swift in Sources */,
 				D7AF51EF24E5E94B00E4F9B4 /* TodoModel.swift in Sources */,
@@ -742,9 +761,11 @@
 				D7C8E08924DFC76800406032 /* LoremView.swift in Sources */,
 				D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */,
 				D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */,
+				D7DC322124EF145800178A4F /* DeadlineComponent.swift in Sources */,
 				D7C8E06F24DFBFD600406032 /* CounterView.swift in Sources */,
 				D79F285024E1387B00288CBC /* Array+Filtering.swift in Sources */,
 				D782310924E48875005EDA60 /* SignUpViewModel.swift in Sources */,
+				D7DC321F24EF12BF00178A4F /* TextFieldComponent.swift in Sources */,
 				D7A456A524DD3F9900462F94 /* SceneDelegate.swift in Sources */,
 				D7C8E07324DFC03600406032 /* FormView.swift in Sources */,
 				D79E767D24E9DCE20099FEF1 /* FloatingActionButton.swift in Sources */,
@@ -753,7 +774,6 @@
 				D7C8E06724DFBE5A00406032 /* ItemView.swift in Sources */,
 				D7A456A724DD3F9900462F94 /* ContentView.swift in Sources */,
 				D79F284C24E1387B00288CBC /* WeeklyWeatherBuilder.swift in Sources */,
-				D79E767F24E9DCE20099FEF1 /* InputSheetView.swift in Sources */,
 				D79F285624E1387B00288CBC /* CurrentWeatherView.swift in Sources */,
 				D7C8E0BC24E018DA00406032 /* LoremService.swift in Sources */,
 				D7C8E08624DFC5FC00406032 /* LoremViewModel.swift in Sources */,
