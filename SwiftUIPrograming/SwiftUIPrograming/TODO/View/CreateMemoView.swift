@@ -17,18 +17,34 @@ struct CreateMemoView: View {
     @State private var date = Date()
     @State private var time = Date()
     private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
-
+    @Environment(\.presentationMode) private var presentationMode
     var body: some View {
         NavigationView {
             VStack {
                 Spacer().frame(height: 24)
-                TextFieldComponent()
+                TextFieldComponent(todoVM: todoVM, memoTitle: $string)
                 Spacer().frame(height: 24)
                 DeadlineComponent(type: "date")
                 Spacer().frame(height: 24)
                 DeadlineComponent(type: "hour")
                 Spacer().frame(height: 24)
-                SubmitButtonComponent(todoVM: todoVM)
+                // todo 別ファイルにしたいが、dismissが動かなくなる
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    print("Button Tapped")
+                    // https://capibara1969.com/2508/ リファクタリングするときここ参照
+                    self.todoVM.titleList.append(
+                        TodoModel(
+                            title: self.string,
+                            dateDeadLine: self.dateFlag ?self.date : nil,
+                            timeDeadLine: self.timeFlag ?self.time : nil,
+                            isComplete: false
+                        )
+                    )
+
+                }) {
+                    Text("Button")
+                }
                 Spacer()
                     .navigationBarTitle("メモを作成")
             }

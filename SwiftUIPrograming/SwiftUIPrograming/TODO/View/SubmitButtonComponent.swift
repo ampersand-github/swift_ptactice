@@ -10,9 +10,10 @@ import SwiftUI
 
 struct SubmitButtonComponent: View {
     @ObservedObject var todoVM: TodoViewModel
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) private var presentationMode
     var body: some View {
         Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
             print("Button Tapped")
             // https://capibara1969.com/2508/ リファクタリングするときここ参照
             /*
@@ -25,7 +26,6 @@ struct SubmitButtonComponent: View {
              )
              )
              */
-            self.presentationMode.wrappedValue.dismiss()
 
         }) {
             Text("Button")

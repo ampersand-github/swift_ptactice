@@ -9,13 +9,14 @@
 import SwiftUI
 
 struct TextFieldComponent: View {
-    @State private var string: String = ""
+    @ObservedObject var todoVM: TodoViewModel
+    @Binding var memoTitle: String
     private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
 
     var body: some View {
         VStack(alignment: .leading) {
             Text("メモのタイトル").font(.headline)
-            TextField("メモを入力", text: $string)
+            TextField("メモを入力", text: $memoTitle)
                 .padding(.all)
                 .background(backgroundColor)
         }
