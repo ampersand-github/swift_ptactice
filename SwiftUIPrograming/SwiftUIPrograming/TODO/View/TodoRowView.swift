@@ -11,15 +11,24 @@ import SwiftUI
 struct TodoRowView: View {
     @ObservedObject var todoVM = TodoViewModel()
     @State private var vibrateOnRing = false
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+
     var body: some View {
         VStack(spacing: 24) {
-            ForEach(todoVM.titleList) { item in
+            ForEach(todoVM.titleList) { _ in
                 HStack(spacing: 24) {
                     Toggle("", isOn: self.$vibrateOnRing).frame(width: 48)
                     VStack {
-                        Text(String("\(item.dateDeadLine)")).font(.caption)
-                        Text(String("\(item.timeDeadLine)")).font(.caption)
-                        Text(item.title).font(.title)
+                        // todo あとでやる
+                        Text("Task due date: \(Date(), formatter: Self.taskDateFormat)")
+                        // Text("\(item.dateDeadLine)").font(.caption)
+                        // Text("DateFormat: \(selectedDate, formatter: dateFormat)")
+                        // Text(String("\(item.timeDeadLine)")).font(.caption)
+                        // Text(item.title).font(.title)
                     }
                     Spacer()
                 }

@@ -10,23 +10,24 @@ import SwiftUI
 
 struct CreateMemoView: View {
     @ObservedObject var todoVM: TodoViewModel
-
-    @State private var string: String = ""
-    @State var dateFlag: Bool = false
-    @State var timeFlag: Bool = false
-    @State private var date = Date()
-    @State private var time = Date()
-    private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
     @Environment(\.presentationMode) private var presentationMode
+    //
+    @State private var string: String = ""
+    @State var isDate: Bool = false
+    @State var IsTime: Bool = false
+    @State var date: Date = Date()
+    @State var time: Date = Date()
+
     var body: some View {
         NavigationView {
+            // todo スクロール可能にする
             VStack {
                 Spacer().frame(height: 24)
                 TextFieldComponent(todoVM: todoVM, memoTitle: $string)
                 Spacer().frame(height: 24)
-                DeadlineComponent(type: "date")
+                DeadlineComponent(type: "date", isToggle: $isDate, date: $date)
                 Spacer().frame(height: 24)
-                DeadlineComponent(type: "hour")
+                DeadlineComponent(type: "hour", isToggle: $IsTime, date: $time)
                 Spacer().frame(height: 24)
                 // todo 別ファイルにしたいが、dismissが動かなくなる
                 Button(action: {
@@ -36,12 +37,11 @@ struct CreateMemoView: View {
                     self.todoVM.titleList.append(
                         TodoModel(
                             title: self.string,
-                            dateDeadLine: self.dateFlag ?self.date : nil,
-                            timeDeadLine: self.timeFlag ?self.time : nil,
+                            dateDeadLine: self.date ,
+                            timeDeadLine: self.date ,
                             isComplete: false
                         )
                     )
-
                 }) {
                     Text("Button")
                 }

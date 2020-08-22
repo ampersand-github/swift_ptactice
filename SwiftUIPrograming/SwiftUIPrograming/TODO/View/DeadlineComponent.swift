@@ -10,10 +10,8 @@ import SwiftUI
 
 struct DeadlineComponent: View {
     var type: String
-    @State var isToggle: Bool = false
-    @State private var date = Date()
-    private let backgroundColor = Color(red: 239.0 / 255.0, green: 243.0 / 255.0, blue: 244.0 / 255.0, opacity: 1.0)
-
+    @Binding var isToggle: Bool
+    @Binding var date: Date
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     lazy var title = type == "date" ? "日付" : "時間"
     func GetTitle() -> String {
@@ -33,13 +31,15 @@ struct DeadlineComponent: View {
             VStack {
                 Group {
                     if self.isToggle {
-                        DatePicker("", selection: $date, displayedComponents: type == "date" ? .date : .hourAndMinute)
+                        DatePicker(selection: $date, displayedComponents: type == "date" ? .date : .hourAndMinute) {
+                            Text("")
+                        }.labelsHidden()
                     } else {
                         Text("選択できません").font(.caption).opacity(0.6)
                             .frame(width: UIScreen.main.bounds.size.width - 32, height: 48)
                     }
                 }
-            }.background(backgroundColor).cornerRadius(16)
+            }.modifier(InputModifier())
             Spacer().frame(height: 24)
         }
     }
