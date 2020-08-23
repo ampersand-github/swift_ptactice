@@ -9,42 +9,42 @@
 import SwiftUI
 
 struct TodoView: View {
-    @ObservedObject var todoVM: TodoViewModel = TodoViewModel()
-    @Environment(\.presentationMode) var presentationMode
-    var body: some View {
-        ZStack {
-            VStack {
-                TabView {
-                    // - - - - - tag1 - - - - - -
-                    VStack(alignment: .leading) {
-                        InputView(todoVM: todoVM)
-                        Spacer().frame(height: 48)
-                        TodoRowView(todoVM: todoVM)
-                        Spacer()
-                    }.padding(.horizontal, 24)
-                        .tabItem {
-                            VStack {
-                                Image(systemName: "square.and.pencil")
-                                Text("メモ")
-                            }
-                    }.tag(1)
-                    // - - - - - tag2 - - - - - -
-                    Text("Setting")
-                        .tabItem {
-                            VStack {
-                                Image(systemName: "person.crop.circle")
-                                Text("設定")
-                            }
-                    }.tag(2)
-                }
-            }
-            FloatingActionButton(todoVM: todoVM)
+  @ObservedObject var todoVM: TodoViewModel = TodoViewModel()
+  @Environment(\.presentationMode) var presentationMode
+  var body: some View {
+    ZStack {
+      VStack {
+        TabView {
+          VStack(alignment: .leading) {
+            InputView(todoVM: todoVM)
+            Spacer().frame(height: 48)
+            TodoRowView(todoVM: todoVM)
+            Spacer()
+          }.padding(.horizontal, 24)
+            .tabItem {
+              VStack {
+                Image(systemName: "square.and.pencil")
+                Text("メモ")
+              }
+            }.tag(1)
+          // todo settingviewつくる
+          Text("Setting")
+            .tabItem {
+              VStack {
+                Image(systemName: "person.crop.circle")
+                Text("設定")
+              }
+            }.tag(2)
         }
+      }
+      // todo なんのfabかわからんので名前を変える
+      FloatingActionButton(todoVM: todoVM)
     }
+  }
 }
 
 struct TodoView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodoView()
-    }
+  static var previews: some View {
+    TodoView()
+  }
 }

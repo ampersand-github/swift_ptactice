@@ -2,4 +2,6 @@ line_length: 180
 identifier_name:
   excluded:
     - id # 文字列 id の場合はルールを無視する。こいつのデフォルトワーニングが３なのでidだとワーニングが出てしまうことへの対策
-
+nesting:
+  type_level:
+    warning: 4

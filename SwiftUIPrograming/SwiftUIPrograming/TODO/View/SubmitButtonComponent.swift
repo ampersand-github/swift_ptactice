@@ -9,26 +9,19 @@
 import SwiftUI
 
 struct SubmitButtonComponent: View {
-    @ObservedObject var todoVM: TodoViewModel
-    @Environment(\.presentationMode) private var presentationMode
-    var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            print("Button Tapped")
-            // https://capibara1969.com/2508/ リファクタリングするときここ参照
-            /*
-             self.todoVM.titleList.append(
-             TodoModel(
-             title: self.string,
-             dateDeadLine: self.dateFlag ?self.date : nil,
-             timeDeadLine: self.timeFlag ?self.time : nil,
-             isComplete: false
-             )
-             )
-             */
-
-        }) {
-            Text("Button")
-        }
-    }
+  @ObservedObject var todoVM: TodoViewModel
+  @Binding var isPresented: Bool
+  var todo: TodoModel
+  var body: some View {
+    Button(
+      action: {
+        print("Button Tapped")
+        self.isPresented.toggle()
+        // https://capibara1969.com/2508/ リファクタリングするときここ参照
+        // todo　引数で渡されたmodelをapeendする
+        self.todoVM.todoList.append(self.todo)
+      },
+      label: { Text("Button") }
+    )
+  }
 }

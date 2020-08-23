@@ -9,24 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+  var body: some View {
+    VStack {
+      NavigationView {
         VStack {
-            NavigationView {
-                VStack {
-                    NavigationLink(destination: CountView()) { Text("CountView").modifier(CustomModifier()) }
-                    NavigationLink(destination: ButtonView()) { Text("ButtonView").modifier(CustomModifier()) }
-                    NavigationLink(destination: FormView()) { Text("FormView").modifier(CustomModifier()) }
-                    NavigationLink(destination: ColorView()) { Text("ColorView").modifier(CustomModifier()) }
-                    NavigationLink(destination: LoremView()) { Text("LoremView").modifier(CustomModifier()) }
-                    NavigationLink(destination: TodoView()) { Text("TodoView").modifier(CustomModifier()) }
-                }
-            }
+          NavigationLink(destination: CountView()) { Text("CountView").modifier(CustomModifier()) }
+          NavigationLink(destination: ButtonView()) { Text("ButtonView").modifier(CustomModifier()) }
+          NavigationLink(destination: FormView()) { Text("FormView").modifier(CustomModifier()) }
+          NavigationLink(destination: ColorView()) { Text("ColorView").modifier(CustomModifier()) }
+          NavigationLink(destination: LoremView()) { Text("LoremView").modifier(CustomModifier()) }
+          NavigationLink(destination: TodoView()) { Text("TodoView").modifier(CustomModifier()) }
         }
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ContentButtonView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+  var body: some View {
+    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  }
 }
 
 struct ContentButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentButtonView()
-    }
+  static var previews: some View {
+    ContentButtonView()
+  }
 }

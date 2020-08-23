@@ -10,9 +10,11 @@ import Foundation
 import SwiftUI
 
 struct TodoModel: Identifiable {
-    var id = UUID()
-    var title: String
-    var dateDeadLine: Date?
-    var timeDeadLine: Date?
-    var isComplete: Bool
+  var id = UUID()
+  var title: String
+  var dateDeadLine: Date
+  var isDate: Bool
+  var timeDeadLine: Date
+  var isTime: Bool
+  var isComplete: Bool
 }

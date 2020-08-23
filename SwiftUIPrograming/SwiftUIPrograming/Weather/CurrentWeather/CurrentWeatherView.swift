@@ -29,13 +29,13 @@
 import SwiftUI
 
 struct CurrentWeatherView: View {
-    var body: some View {
-        Text("Seems like a lovely day 😎")
-    }
+  var body: some View {
+    Text("Seems like a lovely day 😎")
+  }
 }
 
 struct CurrentWeatherView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
+  static var previews: some View {
+    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+  }
 }

@@ -9,22 +9,22 @@
 import SwiftUI
 
 struct LoremView: View {
-    @State var msg = "Plain Text."
-    @ObservedObject var loremVM = LoremViewModel()
+  @State var msg = "Plain Text."
+  @ObservedObject var loremVM = LoremViewModel()
 
-    var body: some View {
-        VStack {
-            Text(msg).font(.title)
-            Divider()
-            Text(loremVM.data).font(.body).padding()
-            Divider()
-            Spacer(minLength: 0)
-        }
+  var body: some View {
+    VStack {
+      Text(msg).font(.title)
+      Divider()
+      Text(loremVM.data).font(.body).padding()
+      Divider()
+      Spacer(minLength: 0)
     }
+  }
 }
 
 struct LoremView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoremView()
-    }
+  static var previews: some View {
+    LoremView()
+  }
 }

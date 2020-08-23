@@ -9,23 +9,23 @@
 import SwiftUI
 
 struct CustomModifier: ViewModifier {
-    var color: Color
+  var color: Color
 
-    init(color: Color = Color.black) {
-        self.color = color
-    }
+  init(color: Color = Color.black) {
+    self.color = color
+  }
 
-    func body(content: Content) -> some View {
-        content
-            .font(.title).padding().foregroundColor(color)
-    }
+  func body(content: Content) -> some View {
+    content
+      .font(.title).padding().foregroundColor(color)
+  }
 }
 
 struct CustomModifier_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            Text("aaaaaa").modifier(CustomModifier())
-            Text("aaaaaa").modifier(CustomModifier(color: Color.red))
-        }
+  static var previews: some View {
+    VStack {
+      Text("aaaaaa").modifier(CustomModifier())
+      Text("aaaaaa").modifier(CustomModifier(color: Color.red))
     }
+  }
 }

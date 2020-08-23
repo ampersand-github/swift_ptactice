@@ -8,8 +8,15 @@
 
 import SwiftUI
 
+// todo ダミーデータ
 class TodoViewModel: ObservableObject {
-    @Published var titleList: [TodoModel] = [
-        TodoModel(title: "aaa", dateDeadLine: nil, timeDeadLine: nil, isComplete: false)
-    ]
+  @Published var todoList: [TodoModel] = [
+  ]
+  func initialTodo() -> TodoModel {
+    TodoModel(title: "", dateDeadLine: Date(), isDate: false, timeDeadLine: Date(), isTime: false, isComplete: false)
+  }
+
+  // todo init ダミーデータを入れる
+  // todo 編集
+  // todo 削除
 }

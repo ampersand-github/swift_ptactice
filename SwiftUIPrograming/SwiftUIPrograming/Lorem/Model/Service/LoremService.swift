@@ -8,12 +8,12 @@
 import Foundation
 
 class LoremService {
-    let url: URL = URL(string: "https://loripsum.net/api/plaintext")!
-    func getText(res: @escaping (String) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            DispatchQueue.main.async {
-                res(String(data: data!, encoding: String.Encoding.utf8)!)
-            }
-        }.resume()
-    }
+  let url: URL = URL(string: "https://loripsum.net/api/plaintext")!
+  func getText(res: @escaping (String) -> Void) {
+    URLSession.shared.dataTask(with: url) { data, _, _ in
+      DispatchQueue.main.async {
+        res(String(data: data!, encoding: String.Encoding.utf8)!)
+      }
+    }.resume()
+  }
 }

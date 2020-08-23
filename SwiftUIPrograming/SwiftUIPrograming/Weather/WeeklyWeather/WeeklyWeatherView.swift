@@ -29,70 +29,70 @@
 import SwiftUI
 
 struct WeeklyWeatherView: View {
-    @ObservedObject var viewModel: WeeklyWeatherViewModel
+  @ObservedObject var viewModel: WeeklyWeatherViewModel
 
-    init(viewModel: WeeklyWeatherViewModel) {
-        self.viewModel = viewModel
-    }
+  init(viewModel: WeeklyWeatherViewModel) {
+    self.viewModel = viewModel
+  }
 
-    var body: some View {
-        NavigationView {
-            List {
-                searchField
+  var body: some View {
+    NavigationView {
+      List {
+        searchField
 
-                if viewModel.dataSource.isEmpty {
-                    emptySection
-                } else {
-                    cityHourlyWeatherSection
-                    forecastSection
-                }
-            }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("Weather ⛅️")
+        if viewModel.dataSource.isEmpty {
+          emptySection
+        } else {
+          cityHourlyWeatherSection
+          forecastSection
         }
+      }
+      .listStyle(GroupedListStyle())
+      .navigationBarTitle("Weather ⛅️")
     }
+  }
 }
 
 private extension WeeklyWeatherView {
-    var searchField: some View {
-        HStack(alignment: .center) {
-            // 1
-            TextField("e.g. Cupertino", text: $viewModel.city)
-        }
+  var searchField: some View {
+    HStack(alignment: .center) {
+      // 1
+      TextField("e.g. Cupertino", text: $viewModel.city)
     }
+  }
 
-    var forecastSection: some View {
-        Section {
-            // 2
-            ForEach(viewModel.dataSource, content: DailyWeatherRow.init(viewModel:))
-        }
+  var forecastSection: some View {
+    Section {
+      // 2
+      ForEach(viewModel.dataSource, content: DailyWeatherRow.init(viewModel:))
     }
+  }
 
-    var cityHourlyWeatherSection: some View {
-        Section {
-            NavigationLink(destination: CurrentWeatherView()) {
-                VStack(alignment: .leading) {
-                    // 3
-                    Text(viewModel.city)
-                    Text("Weather today")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-            }
+  var cityHourlyWeatherSection: some View {
+    Section {
+      NavigationLink(destination: CurrentWeatherView()) {
+        VStack(alignment: .leading) {
+          // 3
+          Text(viewModel.city)
+          Text("Weather today")
+            .font(.caption)
+            .foregroundColor(.gray)
         }
+      }
     }
+  }
 
-    var emptySection: some View {
-        Section {
-            Text("No results")
-                .foregroundColor(.gray)
-        }
+  var emptySection: some View {
+    Section {
+      Text("No results")
+        .foregroundColor(.gray)
     }
+  }
 }
 
 struct WeeklyWeatherView_Previews: PreviewProvider {
-    static var previews: some View {
-        // WeeklyWeatherView(viewModel: WeeklyWeatherViewModel)
-        Text("aa")
-    }
+  static var previews: some View {
+    // WeeklyWeatherView(viewModel: WeeklyWeatherViewModel)
+    Text("aa")
+  }
 }

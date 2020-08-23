@@ -7,13 +7,13 @@
 //
 import SwiftUI
 class LoremViewModel: ObservableObject {
-    @Published var data = String()
+  @Published var data = String()
 
-    init() {
-        getData()
-    }
+  init() {
+    getData()
+  }
 
-    func getData() {
-        LoremService().getText { data in self.data = data }
-    }
+  func getData() {
+    LoremService().getText { data in self.data = data }
+  }
 }
