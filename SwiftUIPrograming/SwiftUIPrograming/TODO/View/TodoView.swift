@@ -16,8 +16,6 @@ struct TodoView: View {
       VStack {
         TabView {
           VStack(alignment: .leading) {
-            InputView(todoVM: todoVM)
-            Spacer().frame(height: 48)
             TodoRowView(todoVM: todoVM)
             Spacer()
           }.padding(.horizontal, 24)
@@ -38,7 +36,7 @@ struct TodoView: View {
         }
       }
       // todo なんのfabかわからんので名前を変える
-      FloatingActionButton(todoVM: todoVM)
+      EditingFloatingActionButton(todoVM: todoVM)
     }
   }
 }

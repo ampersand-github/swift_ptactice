@@ -17,22 +17,8 @@ struct TodoRowView: View {
   var body: some View {
     ScrollView {
       VStack(spacing: 24) {
-        ForEach(todoVM.todoList) { item in
-          HStack(spacing: 24) {
-            Toggle("", isOn: self.$vibrateOnRing).frame(width: 48)
-            VStack(alignment: .leading) {
-              Text(item.isDate
-                ? TodoRowView.dateFormatter.string(from: item.dateDeadLine)
-                : "-"
-              ).font(.caption)
-              Text(item.isTime
-                ? TodoRowView.timeFormatter.string(from: item.timeDeadLine)
-                : "-"
-              ).font(.caption)
-              Text(item.title).font(.title)
-            }
-            Spacer()
-          }
+        ForEach(todoVM.todoList) { todo in
+          TodoCardView(todo: todo)
           Divider()
         }
       }

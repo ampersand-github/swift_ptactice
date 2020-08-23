@@ -12,16 +12,17 @@ struct SubmitButtonComponent: View {
   @ObservedObject var todoVM: TodoViewModel
   @Binding var isPresented: Bool
   var todo: TodoModel
+  let opacity: Double
   var body: some View {
     Button(
       action: {
-        print("Button Tapped")
         self.isPresented.toggle()
         // https://capibara1969.com/2508/ リファクタリングするときここ参照
         // todo　引数で渡されたmodelをapeendする
         self.todoVM.todoList.append(self.todo)
       },
-      label: { Text("Button") }
-    )
+      // todo button アイコン化
+      label: { Text("  決定  ").bold().font(.body).foregroundColor(Color.white) }
+    ).padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)).background(Color.blue).opacity(opacity).cornerRadius(16)
   }
 }
