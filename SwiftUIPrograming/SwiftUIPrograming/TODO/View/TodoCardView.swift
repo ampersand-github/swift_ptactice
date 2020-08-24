@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TodoCardView: View {
   @State var todo: TodoModel
+
   var body: some View {
     HStack(spacing: 24) {
       // Toggle("", isOn: self.todo.$isComplete).frame(width: 48)

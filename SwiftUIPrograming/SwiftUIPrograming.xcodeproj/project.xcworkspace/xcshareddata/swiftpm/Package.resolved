@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Neumorphic",
+        "repositoryURL": "https://github.com/costachung/neumorphic/",
+        "state": {
+          "branch": null,
+          "revision": "2ab34ef079654f2cfc7a33f56c3cfaef34d3f550",
+          "version": "1.2.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

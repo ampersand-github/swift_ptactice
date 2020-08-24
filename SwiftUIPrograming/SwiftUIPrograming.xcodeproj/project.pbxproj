@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		D79E767C24E9DCE20099FEF1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767724E9DCE10099FEF1 /* InputView.swift */; };
 		D79E767D24E9DCE20099FEF1 /* EditingFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767824E9DCE10099FEF1 /* EditingFloatingActionButton.swift */; };
 		D79E767E24E9DCE20099FEF1 /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767924E9DCE10099FEF1 /* TextAlert.swift */; };
+		D79EC20024F31A9D00DB7872 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = D79EC1FF24F31A9D00DB7872 /* Neumorphic */; };
 		D79F284B24E1387B00288CBC /* WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283424E1387B00288CBC /* WeeklyWeatherView.swift */; };
 		D79F284C24E1387B00288CBC /* WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283524E1387B00288CBC /* WeeklyWeatherBuilder.swift */; };
 		D79F284D24E1387B00288CBC /* WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F283624E1387B00288CBC /* WeeklyWeatherViewModel.swift */; };
@@ -159,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79EC20024F31A9D00DB7872 /* Neumorphic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +533,9 @@
 			dependencies = (
 			);
 			name = SwiftUIPrograming;
+			packageProductDependencies = (
+				D79EC1FF24F31A9D00DB7872 /* Neumorphic */,
+			);
 			productName = SwiftUIPrograming;
 			productReference = D7A4569F24DD3F9900462F94 /* SwiftUIPrograming.app */;
 			productType = "com.apple.product-type.application";
@@ -605,6 +610,9 @@
 				Base,
 			);
 			mainGroup = D7A4569624DD3F9900462F94;
+			packageReferences = (
+				D79EC1FE24F31A9D00DB7872 /* XCRemoteSwiftPackageReference "neumorphic" */,
+			);
 			productRefGroup = D7A456A024DD3F9900462F94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1132,6 +1140,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D79EC1FE24F31A9D00DB7872 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D79EC1FF24F31A9D00DB7872 /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D79EC1FE24F31A9D00DB7872 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7A4569724DD3F9900462F94 /* Project object */;
 }

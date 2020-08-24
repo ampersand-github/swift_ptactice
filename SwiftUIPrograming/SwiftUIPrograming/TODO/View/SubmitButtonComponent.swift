@@ -23,6 +23,9 @@ struct SubmitButtonComponent: View {
       },
       // todo button アイコン化
       label: { Text("  決定  ").bold().font(.body).foregroundColor(Color.white) }
-    ).padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)).background(Color.blue).opacity(opacity).cornerRadius(16)
+    ).padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+      .background(RoundedRectangle(cornerRadius: 16, style: .continuous))
+      .foregroundColor(Color.blue)
+      .opacity(opacity)
   }
 }
