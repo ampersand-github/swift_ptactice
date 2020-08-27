@@ -27,32 +27,26 @@ struct ContentView: View {
             Circle().fill(Neumorphic.shared.mainColor()).softOuterShadow().frame(width: 80, height: 80)
             Circle().fill(Neumorphic.shared.mainColor()).softInnerShadow(Circle()).frame(width: 80, height: 80)
           }
-          Button(action: {}) {
-            Text("Soft Button").fontWeight(.bold)
-          }
-          .softButtonStyle(RoundedRectangle(cornerRadius: 20))
-          HStack {
-            Button(action: {}) {
-              Image(systemName: "heart.fill")
-            }.softButtonStyle(Circle())
+          Button(action: {}, label: { Text("Soft Button").fontWeight(.bold) })
 
-            Button(action: {}) {
-              Image(systemName: "heart.fill")
-            }.softButtonStyle(Circle(), mainColor: Color.red, textColor: Color.white, darkShadowColor: Color(rgb: 0x993333, alpha: 1), lightShadowColor: Color("redButtonLightShadow"))
+            .softButtonStyle(RoundedRectangle(cornerRadius: 20))
+          HStack {
+            Button(action: {}, label: { Image(systemName: "heart.fill") })
+
+              .softButtonStyle(Circle())
+
+            Button(action: {}, label: { Image(systemName: "heart.fill") })
+              .softButtonStyle(
+                Circle(), mainColor: Color.red, textColor: Color.white, darkShadowColor: Color(rgb: 0x993333, alpha: 1), lightShadowColor: Color("redButtonLightShadow")
+              )
           }
           HStack {
             Spacer()
-            Button(action: {}) {
-              Text(".none").fontWeight(.bold)
-            }.softButtonStyle(Capsule(), pressedEffect: .none)
+            Button(action: {}, label: { Text(".none").fontWeight(.bold) }).softButtonStyle(Capsule(), pressedEffect: .none)
             Spacer()
-            Button(action: {}) {
-              Text(".flat").fontWeight(.bold)
-            }.softButtonStyle(Capsule(), pressedEffect: .flat)
+            Button(action: {}, label: { Text(".flat").fontWeight(.bold) }).softButtonStyle(Capsule(), pressedEffect: .flat)
             Spacer()
-            Button(action: {}) {
-              Text(".hard").fontWeight(.bold)
-            }.softButtonStyle(Capsule(), pressedEffect: .hard)
+            Button(action: {}, label: { Text(".hard").fontWeight(.bold) }).softButtonStyle(Capsule(), pressedEffect: .hard)
             Spacer()
           }
         }
