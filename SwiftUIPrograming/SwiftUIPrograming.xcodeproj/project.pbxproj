@@ -13,6 +13,7 @@
 		D782310924E48875005EDA60 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782310824E48875005EDA60 /* SignUpViewModel.swift */; };
 		D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782310A24E488A9005EDA60 /* SignUpView.swift */; };
 		D78DCC35E1EFFEA8F17ECFF3 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31141A9C66B486583F622B2 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework */; };
+		D794392624F84FCD00F29F8C /* ContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794392524F84FCD00F29F8C /* ContentsView.swift */; };
 		D7955A7A24F70986006CA742 /* SwipeSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7955A7924F70986006CA742 /* SwipeSlideView.swift */; };
 		D79588A024F298F400CCC79A /* TodoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D795889F24F298F400CCC79A /* TodoCardView.swift */; };
 		D79DB22F24F1E4D30022A26B /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DB22E24F1E4D30022A26B /* CustomDateFormatter.swift */; };
@@ -98,6 +99,7 @@
 		D782310624E487C9005EDA60 /* ViewModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelObject.swift; sourceTree = "<group>"; };
 		D782310824E48875005EDA60 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D782310A24E488A9005EDA60 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D794392524F84FCD00F29F8C /* ContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsView.swift; sourceTree = "<group>"; };
 		D7955A7924F70986006CA742 /* SwipeSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeSlideView.swift; sourceTree = "<group>"; };
 		D795889F24F298F400CCC79A /* TodoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCardView.swift; sourceTree = "<group>"; };
 		D79DB22E24F1E4D30022A26B /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
@@ -216,6 +218,15 @@
 				D782310A24E488A9005EDA60 /* SignUpView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D794392424F84FB300F29F8C /* ContentsView */ = {
+			isa = PBXGroup;
+			children = (
+				D79E767624E9DCE10099FEF1 /* TodoRowView.swift */,
+				D794392524F84FCD00F29F8C /* ContentsView.swift */,
+			);
+			path = ContentsView;
 			sourceTree = "<group>";
 		};
 		D7955A7824F6F707006CA742 /* TodoView */ = {
@@ -416,12 +427,12 @@
 		D7AF51E624E5E57000E4F9B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D794392424F84FB300F29F8C /* ContentsView */,
 				D7955A7824F6F707006CA742 /* TodoView */,
 				D7DC321D24EF0F0800178A4F /* EditingView */,
 				D79E767824E9DCE10099FEF1 /* EditingFloatingActionButton.swift */,
 				D79E767724E9DCE10099FEF1 /* InputView.swift */,
 				D79E767924E9DCE10099FEF1 /* TextAlert.swift */,
-				D79E767624E9DCE10099FEF1 /* TodoRowView.swift */,
 				D795889F24F298F400CCC79A /* TodoCardView.swift */,
 			);
 			path = View;
@@ -795,6 +806,7 @@
 				D7AF51E524E5D8FD00E4F9B4 /* TodoView.swift in Sources */,
 				D7955A7A24F70986006CA742 /* SwipeSlideView.swift in Sources */,
 				D79E767B24E9DCE20099FEF1 /* TodoRowView.swift in Sources */,
+				D794392624F84FCD00F29F8C /* ContentsView.swift in Sources */,
 				D7C8E08924DFC76800406032 /* LoremView.swift in Sources */,
 				D7C8E06624DFBE5A00406032 /* DetailView.swift in Sources */,
 				D782310B24E488A9005EDA60 /* SignUpView.swift in Sources */,

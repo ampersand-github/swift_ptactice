@@ -9,18 +9,15 @@
 import SwiftUI
 
 struct TodoView: View {
-  @ObservedObject var todoVM: TodoViewModel = TodoViewModel()
+  @ObservedObject var todoVM: TodoViewModel = TodoViewModel(isSetDammy: true)
   @Environment(\.presentationMode) var presentationMode
   @State private var index: Int = 0
   var body: some View {
     ZStack {
       VStack {
-        // todo ここがcontetviewになるので分割してつくる
-        Text("sssssssssss")
         TabView {
           VStack(alignment: .leading) {
-            TodoRowView(todoVM: todoVM)
-            Spacer()
+            ContentsView(todoVM: todoVM)
           }.padding(.horizontal, 24)
             .tabItem {
               VStack {

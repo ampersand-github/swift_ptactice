@@ -33,7 +33,7 @@ struct EditingFloatingActionButton: View {
         EditingView(
           todoVM: self.todoVM,
           isPresented: self.$isPresented,
-          todo: self.todoVM.initialTodo()
+          todo: TodoModel()
         )
       }
     }
