@@ -15,7 +15,8 @@
 		D78DCC35E1EFFEA8F17ECFF3 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31141A9C66B486583F622B2 /* Pods_SwiftUIPrograming_SwiftUIProgramingUITests.framework */; };
 		D794392624F84FCD00F29F8C /* ContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794392524F84FCD00F29F8C /* ContentsView.swift */; };
 		D7955A7A24F70986006CA742 /* SwipeSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7955A7924F70986006CA742 /* SwipeSlideView.swift */; };
-		D79588A024F298F400CCC79A /* TodoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D795889F24F298F400CCC79A /* TodoCardView.swift */; };
+		D79B139424F9ADCC00BCA9B7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79B139324F9ADCC00BCA9B7 /* CardView.swift */; };
+		D79B139624FA5EE900BCA9B7 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79B139524FA5EE900BCA9B7 /* DateUtils.swift */; };
 		D79DB22F24F1E4D30022A26B /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DB22E24F1E4D30022A26B /* CustomDateFormatter.swift */; };
 		D79E767B24E9DCE20099FEF1 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767624E9DCE10099FEF1 /* TodoRowView.swift */; };
 		D79E767C24E9DCE20099FEF1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E767724E9DCE10099FEF1 /* InputView.swift */; };
@@ -101,7 +102,8 @@
 		D782310A24E488A9005EDA60 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D794392524F84FCD00F29F8C /* ContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsView.swift; sourceTree = "<group>"; };
 		D7955A7924F70986006CA742 /* SwipeSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeSlideView.swift; sourceTree = "<group>"; };
-		D795889F24F298F400CCC79A /* TodoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCardView.swift; sourceTree = "<group>"; };
+		D79B139324F9ADCC00BCA9B7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D79B139524FA5EE900BCA9B7 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D79DB22E24F1E4D30022A26B /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
 		D79E767624E9DCE10099FEF1 /* TodoRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
 		D79E767724E9DCE10099FEF1 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				D79E767624E9DCE10099FEF1 /* TodoRowView.swift */,
 				D794392524F84FCD00F29F8C /* ContentsView.swift */,
+				D79B139324F9ADCC00BCA9B7 /* CardView.swift */,
 			);
 			path = ContentsView;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			children = (
 				D7A2549E24F12E0C0058FDBB /* InputModifier.swift */,
 				D79DB22E24F1E4D30022A26B /* CustomDateFormatter.swift */,
+				D79B139524FA5EE900BCA9B7 /* DateUtils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -433,7 +437,6 @@
 				D79E767824E9DCE10099FEF1 /* EditingFloatingActionButton.swift */,
 				D79E767724E9DCE10099FEF1 /* InputView.swift */,
 				D79E767924E9DCE10099FEF1 /* TextAlert.swift */,
-				D795889F24F298F400CCC79A /* TodoCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 				D7AF51EF24E5E94B00E4F9B4 /* TodoModel.swift in Sources */,
 				D79DB22F24F1E4D30022A26B /* CustomDateFormatter.swift in Sources */,
 				D79F285324E1387B00288CBC /* Parsing.swift in Sources */,
+				D79B139424F9ADCC00BCA9B7 /* CardView.swift in Sources */,
 				D7A456A324DD3F9900462F94 /* AppDelegate.swift in Sources */,
 				D7C8E07124DFBFF200406032 /* ButtonView.swift in Sources */,
 				D7A24E8124E0CC0E00AA1D4B /* CustomBuilder.swift in Sources */,
@@ -821,6 +825,7 @@
 				D79F285924E1387B00288CBC /* Responses.swift in Sources */,
 				D79F284B24E1387B00288CBC /* WeeklyWeatherView.swift in Sources */,
 				D7C8E06724DFBE5A00406032 /* ItemView.swift in Sources */,
+				D79B139624FA5EE900BCA9B7 /* DateUtils.swift in Sources */,
 				D7A456A724DD3F9900462F94 /* ContentView.swift in Sources */,
 				D79F284C24E1387B00288CBC /* WeeklyWeatherBuilder.swift in Sources */,
 				D79F285624E1387B00288CBC /* CurrentWeatherView.swift in Sources */,
@@ -830,7 +835,6 @@
 				D79E767E24E9DCE20099FEF1 /* TextAlert.swift in Sources */,
 				D7782B6324F27DF80082AE5D /* EditingView.swift in Sources */,
 				D79F284E24E1387B00288CBC /* DailyWeatherRow.swift in Sources */,
-				D79588A024F298F400CCC79A /* TodoCardView.swift in Sources */,
 				D79F285424E1387B00288CBC /* CurrentWeatherViewModel.swift in Sources */,
 				D7AF51EA24E5E5EA00E4F9B4 /* TodoViewModel.swift in Sources */,
 				D79F285824E1387B00288CBC /* WeatherError.swift in Sources */,

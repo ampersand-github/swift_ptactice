@@ -18,7 +18,7 @@ struct TodoRowView: View {
     ScrollView {
       VStack(spacing: 24) {
         ForEach(todoVM.todoList) { todo in
-          TodoCardView(todo: todo)
+          CardView(todo: todo)
           Divider()
         }
       }
