@@ -9,10 +9,9 @@
 import SwiftUI
 
 struct ContentsView: View {
-  @ObservedObject var todoVM: TodoViewModel
   var body: some View {
     VStack {
-      TodoRowView(todoVM: todoVM)
+      TodoRowView()
       Spacer()
     }
   }

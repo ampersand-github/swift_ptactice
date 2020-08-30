@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SubmitButtonComponent: View {
-  @ObservedObject var todoVM: TodoViewModel
   @Binding var isPresented: Bool
+  @EnvironmentObject var todoVM: TodoViewModel
   var todo: TodoModel
   let opacity: Double
   var body: some View {
@@ -20,6 +20,7 @@ struct SubmitButtonComponent: View {
         // https://capibara1969.com/2508/ リファクタリングするときここ参照
         // todo　引数で渡されたmodelをapeendする
         // todo 処理をviewの中で書かない。vmで書いて、それに渡して上げるだけ
+        print(self.todo)
         self.todoVM.todoList.append(self.todo)
       },
       // todo button アイコン化

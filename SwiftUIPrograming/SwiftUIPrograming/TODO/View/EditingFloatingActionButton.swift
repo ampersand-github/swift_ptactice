@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct EditingFloatingActionButton: View {
-  @ObservedObject var todoVM: TodoViewModel
   @State private var isPresented = false
+  @EnvironmentObject var todo: TodoViewModel
+
   var body: some View {
     VStack {
       Spacer()
@@ -29,12 +30,10 @@ struct EditingFloatingActionButton: View {
           .shadow(color: .gray, radius: 3, x: 3, y: 3)
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 24, trailing: 16.0)) // --- 5
       }.sheet(isPresented: $isPresented) {
-        // todo create -> edit
         EditingView(
-          todoVM: self.todoVM,
           isPresented: self.$isPresented,
           todo: TodoModel()
-        )
+        ).environmentObject(TodoViewModel())
       }
     }
   }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TodoRowView: View {
-  @ObservedObject var todoVM = TodoViewModel()
+  @EnvironmentObject var todoVM: TodoViewModel
   @State private var vibrateOnRing = false
   static let dateFormatter: DateFormatter = customDateFormatter(format: "yyyy/MM/dd")
   static let timeFormatter: DateFormatter = customDateFormatter(format: "hh:mm")

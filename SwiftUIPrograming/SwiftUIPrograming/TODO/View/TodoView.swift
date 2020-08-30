@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct TodoView: View {
-  @ObservedObject var todoVM: TodoViewModel = TodoViewModel(isSetDammy: true)
   @Environment(\.presentationMode) var presentationMode
   @State private var index: Int = 0
   var body: some View {
@@ -17,7 +16,7 @@ struct TodoView: View {
       VStack {
         TabView {
           VStack(alignment: .leading) {
-            ContentsView(todoVM: todoVM)
+            ContentsView().environmentObject(TodoViewModel(isSetDammy: true))
           }.padding(.horizontal, 24)
             .tabItem {
               VStack {
@@ -36,7 +35,7 @@ struct TodoView: View {
         }
       }
       // todo なんのfabかわからんので名前を変える
-      EditingFloatingActionButton(todoVM: todoVM)
+      EditingFloatingActionButton()
     }
   }
 }

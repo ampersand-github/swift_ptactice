@@ -6,6 +6,7 @@
 //  Copyright © 2020 開発. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 @UIApplicationMain

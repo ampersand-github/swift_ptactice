@@ -15,11 +15,12 @@ struct ContentView: View {
       NavigationView {
         VStack {
           NavigationLink(destination: CountView()) { Text("CountView").modifier(CustomModifier()) }
-          NavigationLink(destination: ButtonView()) { Text("ButtonView").modifier(CustomModifier()) }
+          // NavigationLink(destination: ButtonView()) { Text("ButtonView").modifier(CustomModifier()) }
           NavigationLink(destination: FormView()) { Text("FormView").modifier(CustomModifier()) }
           NavigationLink(destination: ColorView()) { Text("ColorView").modifier(CustomModifier()) }
           NavigationLink(destination: LoremView()) { Text("LoremView").modifier(CustomModifier()) }
           NavigationLink(destination: TodoView()) { Text("TodoView").modifier(CustomModifier()) }
+
           //
           HStack {
             RoundedRectangle(cornerRadius: 20).fill(Neumorphic.shared.mainColor()).softOuterShadow().frame(width: 80, height: 80)

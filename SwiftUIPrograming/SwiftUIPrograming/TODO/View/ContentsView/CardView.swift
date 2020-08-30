@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct CheckView: View {
-  @Binding var isChecked: Bool
-  func toggle() { isChecked = !isChecked }
+  @State var isChecked: Bool = false
+  func toggle() {
+    isChecked = !isChecked
+  }
+
   var body: some View {
     Button(action: toggle) {
       Image(systemName: isChecked ? "checkmark.square" : "square")
@@ -20,49 +23,54 @@ struct CheckView: View {
 }
 
 struct CardView: View {
-  @State var todo: TodoModel
-  func crarteDeadlineText() -> String {
-    if todo.dateDeadLine == Date() {
-      print("今日が締切")
-    } else if todo.dateDeadLine < Date() {
-      print("まだ")
-    } else {
-      print("超過")
-    }
-    return DateUtils.stringFromDate(date: todo.dateDeadLine, format: "dd")
-  }
-
+  @EnvironmentObject var todoVM: TodoViewModel
+  var todo: TodoModel
+  let today: Date = Calendar.current.startOfDay(for: Date())
+  func setTargetDay(day: Date) -> Date { Calendar.current.startOfDay(for: day) }
   var body: some View {
     HStack { // spacingはここでやらないのであとで消す
       // - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  -
-      CheckView(isChecked: self.$todo.isComplete)
-      Spacer().frame(width: 24)
+      // CheckView(todoVM: self.todo)
+      Spacer().frame(width: 16)
       // - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  -
       VStack(alignment: .leading) {
         Text(self.todo.title).font(.headline)
         Spacer().frame(height: 8)
         HStack {
-          Text(self.todo.isDate
-            ? TodoRowView.dateFormatter.string(from: self.todo.dateDeadLine)
-            : "-"
-          )
-          Text(self.todo.isTime
-            ? TodoRowView.timeFormatter.string(from: self.todo.timeDeadLine)
-            : "-"
-          )
+          Text(TodoRowView.dateFormatter.string(from: self.todo.dateDeadLine))
+          Text(TodoRowView.timeFormatter.string(from: self.todo.timeDeadLine))
         }.font(.caption).opacity(0.6)
       }
       // - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  -
       Spacer()
+
       VStack(alignment: .trailing) {
-        Text(crarteDeadlineText()).font(.caption).opacity(0.6)
+        if setTargetDay(day: self.todo.dateDeadLine) == today {
+          HStack {
+            Text("締切日！").fontWeight(.black).foregroundColor(Color.orange).font(.caption)
+          }
+        } else if setTargetDay(day: self.todo.dateDeadLine) > today {
+          Text("あと" +
+            String(Calendar.current.dateComponents([.day], from: today, to: self.todo.dateDeadLine).day!)
+            + "日"
+          )
+          .fontWeight(.bold).foregroundColor(Color.green).font(.caption).opacity(0.6)
+        } else {
+          Text(String(Calendar.current.dateComponents([.day], from: self.todo.dateDeadLine, to: today).day! + 1)
+            + "日超過"
+          ).fontWeight(.bold).foregroundColor(Color.red).font(.caption).opacity(0.6)
+        }
         Spacer().frame(height: 8)
         Text("tag").font(.caption).opacity(0.6)
       }
       // - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  -
     }
-    .padding(EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24))
-    .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
+    .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+    .background(
+      self.todo.isComplete
+        ? Color.gray
+        : Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255)
+    )
     .cornerRadius(16)
   }
 }
